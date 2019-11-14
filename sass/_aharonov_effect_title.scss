@@ -1,0 +1,207 @@
+#aharonov_effect-article.article-container {
+
+  .aharonov-title {
+
+    &__container {
+      display: grid;
+      grid-template-rows: repeat(2, auto) auto .5fr;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 0;
+      grid-auto-columns: 0;
+      height: 100vh;
+
+      @include respond(medium) {
+        max-height: 75vh;
+      }
+
+      img {
+        grid-row: 1 / span 4;
+        grid-column: 1 / span 2;
+        object-fit: cover;
+        max-height: 100vh;
+        max-width: auto;
+        margin: 0 auto;
+      }
+
+      h1 {
+        grid-row: 1 / span 2;
+        grid-column: 1 / span 2;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1.75fr .25fr;
+        grid-auto-rows: 0;
+        grid-auto-columns: 0;
+        justify-self: center;
+        width: 82rem;
+        font-size: 15.5rem;
+        line-height: 1;
+        z-index: 5;
+        color: $color-secondary;
+
+        @include respond(medium) {
+          grid-template-columns: repeat(2, 1fr);
+          width: 75rem;
+          font-size: 12rem;
+        }
+
+        @include respond(small) {
+          width: 60rem;
+          font-size: 10rem;
+        }
+
+        @include respond(phone) {
+          width: 45rem;
+          margin-top: 5rem;
+          font-size: 7rem;
+          line-height: 0.75;
+        }
+
+        span {
+          display: block;
+          text-transform: uppercase;
+          font-family: 'futura-pt-condensed';
+        }
+
+
+        span:first-child {
+          grid-row: 1 / span 1;
+          grid-column: 1 / span 1;
+
+          &:after {
+            content: "";
+            display: block;
+            width: 14%;
+            margin-left: -2%;
+            margin-top: -1rem;
+            border-bottom: 11px solid black;
+
+            @include respond(phone) {
+              margin-top: 0rem;
+              border-bottom: 5px solid black;
+            }
+          }
+        }
+
+        span:nth-child(2) {
+          grid-row: 2 / span 1;
+          grid-column: 1 / span 1;
+        }
+
+        span:last-child {
+          grid-row: 3 / span 1;
+          grid-column: 2 / span 1;
+          color: white;
+          align-self: flex-end;
+
+          @include respond(small) {
+            margin-left: 1rem;
+          }
+
+          @include respond(phone) {
+            margin-left: 0;
+          }
+
+          @include respond(medium) {
+            margin-left: 3rem;
+          }
+
+          &:after {
+            content: "";
+            display: block;
+            width: 50%;
+            margin-left: 45%;
+            margin-top: -1rem;
+            border-bottom: 11px solid black;
+
+            @include respond(phone) {
+              margin-top: 0.5rem;
+              border-bottom: 5px solid black;
+            }
+
+            @include respond(medium) {
+              width: 20%;
+            }
+          }
+        }
+      }
+    }
+
+    &__author {
+      grid-row: 3 / span 1;
+      grid-column: 2 / span 1;
+      color: white;
+      font-size: 3.7rem;
+      text-transform: uppercase;
+      margin: 7rem 0 7rem 20rem;
+
+      @include respond(large) {
+        font-size: 3.5rem;
+        margin: 2rem 0 7rem 15rem;
+      }
+
+      @include respond(small) {
+        margin: 4rem 0 7rem 5rem;
+        font-size: 3.2rem;
+      }
+
+      @include respond(phone) {
+        font-size: 2.6rem;
+      }
+
+    }
+
+    &__description {
+      grid-row: 4 / span 1;
+      grid-column: 2 / span 1;
+      align-self: center;
+      margin: 6rem 0 0rem 28rem;
+      width: 33rem;
+      color: black;
+      font-size: 2rem;
+      font-weight: 500;
+      font-family: 'futura-pt';
+      line-height: 2rem;
+      text-transform: uppercase;
+
+      @include respond(large) {
+        // margin: 0 0 0 18rem;
+        align-self: flex-start;
+        justify-self: flex-end;
+        width: 28rem;
+        margin: 8rem 0 0 0;
+      }
+
+      @include respond(medium) {
+        align-self: flex-end;
+        justify-self: center;
+        margin: 0 0 0 11rem;
+      }
+
+      @include respond(small) {
+        margin: 0 0 0 11rem;
+        font-size: 1.4rem;
+        width: 26rem;      }
+
+      @include respond(phone) {
+        font-size: 1.2rem;
+        width: 17rem;
+        align-self: center;
+        margin: 6rem 0 5rem 8rem;
+      }
+    }
+
+    &__desktop-img {
+      @include respond(medium) {
+        display: none;
+      }
+    }
+
+    &__mobile-img {
+      display: none;
+
+      @include respond(medium) {
+        display: block;
+      }
+    }
+  }
+}

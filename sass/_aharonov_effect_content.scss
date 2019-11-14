@@ -1,0 +1,133 @@
+#aharonov_effect-article.article-container {
+
+  .aharonov-effect__article-content {
+    display: grid;
+    grid-template-columns: .25fr 1fr .25fr;
+    font-size: 1.6rem;
+
+    p,
+    h3 {
+      grid-column: 2 / span 1;
+    }
+
+    .aharonov-effect__article-figure.one {
+      grid-column: 1 / span 1;
+
+      img {
+        width: 31.7rem;
+      }
+    }
+
+    .aharonov-effect__article-figure.two {
+      grid-column: 1 / span 2;
+
+      img {
+        width: 90.8rem;
+        height: 108.3rem;
+      }
+    }
+
+    .aharonov-effect__article-theory-box {
+      grid-column: 1 / span 3;
+      justify-self: center;
+      width: 108rem;
+      position: relative;
+
+      ul {
+        position: relative;
+        width: 108rem;
+        height: 45.6rem;
+        font-size: 1rem;
+        list-style-type: none;
+
+        li {
+          display: flex;
+          align-items: center;
+          height: 6.5em;
+
+          &::before {
+            content: '';
+            display: inline-block;
+            margin-right: .5em;
+            color: $color-secondary;
+            height: 4.3em;
+            border-left: 10px solid $color-secondary;
+          }
+
+          p.theory-listing {
+            font-size: 1.8em;
+            font-weight: 400;
+            height: auto;
+            margin: 0;
+            color: black;
+            text-transform: uppercase;
+
+            &:hover {
+              cursor: pointer;
+            }
+
+            
+          }
+
+          .theory-content {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 0;
+            left: 23.5em;
+            width: 84.5em;
+            height: 45.6em;
+            padding: 5em 7em;
+            background-color: $color-secondary;
+            color: white;
+            z-index: 20;
+
+
+            &.five {
+              height: 65.6em;
+            }
+
+            .aharonov-effect__theory {
+              width: 45em;
+            }
+
+            .theory-title {
+              font-size: 2.8em;
+              text-transform: uppercase;
+              margin-bottom: 1em;
+            }
+
+            .theory-description {
+              line-height: 1.5;
+              font-size: 2em;
+              font-weight: 300;
+            }
+
+            svg {
+              width: 18em;
+            }
+
+          }
+
+          &.active {
+
+            p {
+              color: white;
+            }
+
+            background-color: $color-secondary;
+          }
+        }
+      }
+
+      .rectangle-shape {
+        position: absolute;
+        height: 90%;
+        top: 4em;
+        left: 2em;
+        width: 84.5em;
+        z-index: -1;
+      }
+    }
+  }
+}

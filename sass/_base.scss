@@ -3,6 +3,7 @@ $color-primary: #00a8b6;
 $color-primary-light: #00a8b5;
 
 $color-secondary: #a50034;
+$color-secondary-lite: #a10034;
 
 $color-white: #FFF;
 $color-black: #000;
@@ -43,7 +44,7 @@ $full-display: [left-edge-start] 10rem [ left-edge-end first-column-start ] 20re
 
 
 // RESPONSIVE BREAKPOINTS
-$bp-largest: 1200px;   // 1200px
+$bp-largest: 1900px;   // 1200px
 $bp-large: 1128px;   // 1000px
 $bp-medium: 800px;    // 800px;
 $bp-small: 678px;    // 600px;
@@ -78,7 +79,7 @@ html {
     }
 
     @media only screen and (max-width: $bp-mobile) {
-      font-size: 48%;
+      font-size: 45%;
     }
 }
 
@@ -102,4 +103,8 @@ body {
     color: $color-grey-dark-2;
     font-weight: 300;
     line-height: 1.6rem;
+    
+    .hidden {
+      display: none !important;
+    }
 }

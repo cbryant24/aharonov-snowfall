@@ -1,0 +1,58 @@
+@mixin clearfix {
+  &::after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+ORDER: Base + typography > general layout + grid > page layout > components
+1em = 16px
+*/
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 1900px;   // 1200px
+$bp-large: 1000px;   // 1000px
+$bp-medium: 800px;    // 800px;
+$bp-small: 678px;    // 600px;
+$bp-mobile: 425px;
+
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+      @media only screen and (max-width: $bp-mobile) { @content };    //600px
+  }
+  @if $breakpoint == small {
+      @media only screen and (max-width: $bp-small) { @content };     //900px
+  }
+  @if $breakpoint == medium {
+      @media only screen and (max-width: $bp-medium) { @content };    //1200px
+  }
+  @if $breakpoint == large {
+      @media only screen and (max-width: $bp-large) { @content };    //1800
+  }
+
+  @if $breakpoint == largest {
+    @media only screen and (max-width: $bp-largest) { @content };    //1800
+}
+}
