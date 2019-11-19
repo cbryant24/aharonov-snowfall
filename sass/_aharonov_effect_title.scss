@@ -10,9 +10,11 @@
       grid-auto-columns: 0;
       height: 100vh;
 
-      // @include respond(medium) {
-      //   max-height: 75vh;
-      // }
+      font-size: 1rem;
+
+      @include respond(medium) {
+        font-size: .9rem;
+      }
 
       img {
         grid-row: 1 / span 4;
@@ -32,27 +34,24 @@
         grid-auto-rows: 0;
         grid-auto-columns: 0;
         justify-self: center;
-        width: 82rem;
-        font-size: 15.5rem;
-        line-height: 1;
+        width: 5.25em;
+        font-size: 14em;
+        line-height: .75;
         z-index: 5;
         color: $color-secondary;
 
         @include respond(medium) {
           grid-template-columns: repeat(2, 1fr);
-          width: 75rem;
-          font-size: 12rem;
+          font-size: 12em;
         }
 
         @include respond(small) {
-          width: 60rem;
-          font-size: 10rem;
+          font-size: 10em;
         }
 
         @include respond(phone) {
-          width: 45rem;
-          margin-top: 5rem;
-          font-size: 7rem;
+          margin-top: 5em;
+          font-size: 7em;
           line-height: 0.75;
         }
 
@@ -72,11 +71,10 @@
             display: block;
             width: 14%;
             margin-left: -2%;
-            margin-top: -1rem;
             border-bottom: 11px solid black;
 
             @include respond(phone) {
-              margin-top: 0rem;
+              margin-top: 0em;
               border-bottom: 5px solid black;
             }
           }
@@ -91,10 +89,9 @@
           grid-row: 3 / span 1;
           grid-column: 2 / span 1;
           color: white;
-          align-self: flex-end;
 
           @include respond(small) {
-            margin-left: 1rem;
+            margin-left: 1em;
           }
 
           @include respond(phone) {
@@ -102,7 +99,7 @@
           }
 
           @include respond(medium) {
-            margin-left: 3rem;
+            // margin-left: 3em;
           }
 
           &:after {
@@ -110,11 +107,10 @@
             display: block;
             width: 50%;
             margin-left: 45%;
-            margin-top: -1rem;
             border-bottom: 11px solid black;
 
             @include respond(phone) {
-              margin-top: 0.5rem;
+              margin-top: 0.5em;
               border-bottom: 5px solid black;
             }
 
@@ -129,23 +125,22 @@
     &__author {
       grid-row: 3 / span 1;
       grid-column: 2 / span 1;
+      margin-left: 7em;
       color: white;
-      font-size: 3.7rem;
+      font-size: 3.7em;
       text-transform: uppercase;
-      margin: 7rem 0 7rem 20rem;
 
       @include respond(large) {
-        font-size: 3.5rem;
-        margin: 2rem 0 7rem 15rem;
+        font-size: 3.5em;
       }
 
       @include respond(small) {
-        margin: 4rem 0 7rem 5rem;
-        font-size: 3.2rem;
+        margin: 4em 0 7em 5em;
+        font-size: 3.2em;
       }
 
       @include respond(phone) {
-        font-size: 2.6rem;
+        font-size: 2.6em;
       }
 
     }
@@ -154,39 +149,39 @@
       grid-row: 4 / span 1;
       grid-column: 2 / span 1;
       align-self: center;
-      margin: 6rem 0 0rem 28rem;
-      width: 33rem;
+      width: 30vw;
+      margin-left: 12em;
       color: black;
-      font-size: 2rem;
+      font-size: 2em;
       font-weight: 500;
       font-family: 'futura-pt';
-      line-height: 2rem;
+      line-height: 2em;
       text-transform: uppercase;
 
       @include respond(large) {
-        // margin: 0 0 0 18rem;
+        // margin: 0 0 0 18em;
         align-self: flex-start;
         justify-self: flex-end;
-        width: 28rem;
-        margin: 8rem 0 0 0;
+        width: 28em;
+        margin: 8em 0 0 0;
       }
 
       @include respond(medium) {
         align-self: flex-end;
         justify-self: center;
-        margin: 0 0 0 11rem;
+        margin: 0 0 0 11em;
       }
 
       @include respond(small) {
-        margin: 0 0 0 11rem;
-        font-size: 1.4rem;
-        width: 26rem;      }
+        margin: 0 0 0 11em;
+        font-size: 1.4em;
+        width: 26em;      }
 
       @include respond(phone) {
-        font-size: 1.2rem;
-        width: 17rem;
+        font-size: 1.2em;
+        width: 17em;
         align-self: center;
-        margin: 6rem 0 5rem 8rem;
+        margin: 6em 0 5em 8em;
       }
     }
 
