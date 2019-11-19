@@ -23,9 +23,9 @@ $(document).ready(function () {
     $this.parent().addClass('active');
     $this.siblings('.theory-content').removeClass('hidden');
     if ($this.hasClass('five')) {
-      $('.aharonov-effect__article-theory-box').css('min-height', '72.5em');
+      $('.aharonov-effect__article-theory-box').css('min-height', '85.5em');
     } else {
-      $('.aharonov-effect__article-theory-box').css('min-height', '53.5em');
+      $('.aharonov-effect__article-theory-box').css('min-height', '63.5em');
     }
     
     // if ($this.hasClass('one') && $highlightOneVisible) {

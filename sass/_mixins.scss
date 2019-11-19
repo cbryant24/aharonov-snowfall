@@ -31,7 +31,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 */
 
 // RESPONSIVE BREAKPOINTS
-$bp-largest: 1900px;   // 1200px
+$bp-largest: 1300px;   // 1200px
 $bp-large: 1000px;   // 1000px
 $bp-medium: 800px;    // 800px;
 $bp-small: 678px;    // 600px;
@@ -40,19 +40,19 @@ $bp-mobile: 425px;
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
-      @media only screen and (max-width: $bp-mobile) { @content };    //600px
+      @media only screen and (max-width: $bp-mobile) { @content };    //425px
   }
   @if $breakpoint == small {
-      @media only screen and (max-width: $bp-small) { @content };     //900px
+      @media only screen and (max-width: $bp-small) { @content };     //678px
   }
   @if $breakpoint == medium {
-      @media only screen and (max-width: $bp-medium) { @content };    //1200px
+      @media only screen and (max-width: $bp-medium) { @content };    //800px
   }
   @if $breakpoint == large {
-      @media only screen and (max-width: $bp-large) { @content };    //1800
+      @media only screen and (max-width: $bp-large) { @content };    //1000
   }
 
   @if $breakpoint == largest {
-    @media only screen and (max-width: $bp-largest) { @content };    //1800
+    @media only screen and (max-width: $bp-largest) { @content };    //1200
 }
 }

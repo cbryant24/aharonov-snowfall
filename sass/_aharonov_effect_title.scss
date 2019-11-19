@@ -10,16 +10,16 @@
       grid-auto-columns: 0;
       height: 100vh;
 
-      @include respond(medium) {
-        max-height: 75vh;
-      }
+      // @include respond(medium) {
+      //   max-height: 75vh;
+      // }
 
       img {
         grid-row: 1 / span 4;
         grid-column: 1 / span 2;
-        object-fit: cover;
-        max-height: 100vh;
-        max-width: auto;
+        object-fit: contain;
+        height: 100vh;
+        width: 100vw;
         margin: 0 auto;
       }
 

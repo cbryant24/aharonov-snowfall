@@ -1,4 +1,37 @@
 #aharonov_effect-article.article-container {
+  position: relative;
+  z-index: 1;
+  font-size: 1rem;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 21%;
+    background-color: #231f20;
+
+    @include respond(large) {
+      height: 22%;
+    }
+
+    @include respond(small) {
+      height: 20%;
+    }
+
+    @media only screen and (max-width: 500px) {
+      height: 22%;
+    }
+
+    @include respond(phone) {
+      height: 24%;
+    }
+
+    @media only screen and (max-width: 325px) {
+      height: 23%;
+    }
+  }
 
   .aharonov-effect__article-content {
     display: grid;
@@ -7,10 +40,25 @@
     column-gap: 2rem;
     margin: 0 2rem;
     font-size: 1rem;
+    z-index: 5;
+
+    @include respond(large) {
+      grid-template-columns: 20% 60% 20%;
+      font-size: .9rem;
+    }
+
+    @include respond(small) {
+      display: flex;
+      flex-direction: column;
+      margin: 0 7rem;
+    }
 
     p,
     h3 {
       grid-column: 2 / span 1;
+      line-height: 1.75;
+      width: 100%;
+      justify-self: center;
     }
 
     p,
@@ -18,16 +66,42 @@
       font-size: 1.6em;
     }
 
+    p {
+      margin: 1em 0;
+    }
+
     .aharonov-effect__callout {
 
-      &.one, &.two {
+      &.one,
+      &.two {
         grid-column: 3 / span 1;
-        grid-row: auto / span 4;
+        width: 25em;
         color: $color-secondary;
         text-transform: uppercase;
+        font-size: 1.25em;
         font-style: italic;
-        width: 25em;
         line-height: 1.2;
+
+        @include respond(large) {
+          width: 14em;
+        }
+
+        @include respond(medium) {
+          width: 11em;
+        }
+
+        @include respond(small) {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      &.one {
+        grid-row: auto / span 4;
+      }
+      
+      &.two {
+        grid-row: 15 / span 4;
       }
     }
 
@@ -36,9 +110,203 @@
       &.one {
         grid-row: auto / span 5;
         grid-column: 1 / span 1;
+        width: 100%;
+
+
+
+        @include respond(phone) {
+          display: flex;
+        }
 
         img {
-          width: 31.7em;
+          width: 100%;
+
+          // @include respond(large) {
+          //   width: 20em;
+          // }
+        }
+
+        figcaption {
+          width: 100%;
+          background-color: #a50034;
+          color: white;
+          font-style: italic;
+          padding: 1em;
+
+          // @include respond(large) {
+          //   width: 90%;
+          // }
+        }
+      }
+
+      &.two {
+        grid-column: 1 / span 2;
+        display: flex;
+        width: 95%;
+        margin: 3em 0;
+        font-size: .9rem;
+
+        @include respond(large) {
+          grid-column: 1 / span 3;
+          font-size: .7rem;
+        }
+
+        @include respond(medium) {
+          width: 95%;
+        }
+
+        @include respond(small) {
+          flex-direction: column;
+          align-items: center;
+          font-size: .4rem;
+        }
+
+        img {
+          width: 90.8em;
+          height: 108.3em;
+
+          @include respond(small) {
+            width: 100%;
+            object-fit: cover;
+            height: auto;
+          }
+        }
+
+        figcaption {
+          height: 39em;
+          width: 27.3em;
+          margin: -2em 0 0 -2em;
+          padding: 6.5em 3em;
+          border: 10px solid #a10054;
+
+          @include respond(largest) {
+            margin: -2em 0 0 -9em;
+          }
+
+          @include respond(small) {
+            border: none;
+            height: auto;
+            font-size: 5em;
+
+            width: 90%;
+            margin: 0;
+            padding: 0;
+          }
+
+          span:first-child {
+            display: block;
+            position: relative;
+            margin: 1.5em 0;
+            font-size: 1.25em;
+            font-weight: 400;
+            line-height: 1.5em;
+            text-transform: uppercase;
+            color: $color-secondary;
+
+            @include respond(small) {
+              text-align: center;
+
+              &:before, &:after {
+                content: '"';
+                font-size: inherit;
+              }
+            }
+
+            svg:first-child {
+              height: 1.6em;
+              position: absolute;
+              top: -1.5em;
+              left: -1.5em;
+
+              @include respond(small) {
+                display: none;
+              }
+            }
+
+            svg:last-child {
+              height: 1.6em;
+              position: absolute;
+              bottom: -1em;
+              left: 6.5em;
+
+              @include respond(small) {
+                display: none;
+              }
+            }
+          }
+
+          span:last-child {
+            display: block;
+            line-height: 1.25;
+          }
+        }
+      }
+
+      &.three {
+        // grid-row: auto / span 5;
+        grid-column: 1 / span 3;
+        display: flex;
+        width: 85%;
+        // height: 51em;
+        height: 100%;
+        padding: 12em 0;
+
+        @include respond(phone) {
+          flex-direction: column;
+          width: 100%;
+          padding: 3em 0;
+        }
+
+        figure {
+          @include respond(phone) {
+            width: 75%;
+            margin: auto;
+          }
+        }
+
+        img {
+          height: 100%;
+          object-fit: cover;
+
+          @include respond(phone) {
+            width: 100%;
+            object-fit: contain;
+          }
+
+        }
+
+        svg {
+          height: 100%;
+          width: 15em;
+
+          @include respond(phone) {
+            display: none;
+          }
+        }
+
+        h3 {
+          color: white;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 45%;
+          font-size: 3.2em;
+          margin: 0 2em;
+
+          @include respond(phone) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 2em 0;
+            width: 100%;
+          }
+
+          span {
+            // display: block;
+
+            &:nth-child(2) {
+              font-size: 1.2em;
+            }
+          }
         }
 
         figcaption {
@@ -46,15 +314,6 @@
           color: white;
           font-style: italic;
           padding: 1em;
-        }
-      }
-
-      &.two {
-        grid-column: 1 / span 2;
-
-        img {
-          width: 90.8em;
-          height: 108.3em;
         }
       }
     }
@@ -74,7 +333,28 @@
       grid-column: 1 / span 3;
       justify-self: center;
       width: 108em;
+      min-height: 63.5em;
       position: relative;
+
+      @include respond(large) {
+        font-size: .8rem;
+      }
+
+      @include respond(medium) {
+        font-size: .65rem;
+      }
+
+      @include respond(phone) {
+        font-size: .45rem;
+      }
+
+      h3 {
+        width: 75%;
+        margin: 1em auto;
+        font-size: 2.4em;
+        text-align: center;
+        color: $color-secondary;
+      }
 
       ul {
         position: relative;
@@ -172,5 +452,20 @@
         z-index: -1;
       }
     }
+    
+    .dark-bg-square {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 12em;
+        width: 13em;
+        border-top: .5em solid $color-secondary;
+        border-left: .5em solid $color-secondary;
+
+        @include respond(small) {
+          display: none;
+        }
+    }
+
   }
 }
