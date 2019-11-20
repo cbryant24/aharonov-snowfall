@@ -86,7 +86,7 @@
         line-height: 1.2;
 
         @include respond(large) {
-          width: 14em;
+          width: 12em;
         }
 
         @include respond(medium) {
