@@ -12,6 +12,9 @@
 
       font-size: 1rem;
 
+      @include respond(large) {
+        font-size: .95rem;
+      }
       @include respond(medium) {
         font-size: .9rem;
       }
@@ -20,8 +23,8 @@
         grid-row: 1 / span 4;
         grid-column: 1 / span 2;
         object-fit: contain;
-        height: 100vh;
-        width: 100vw;
+        height: 100%;
+        width: 100%;
         margin: 0 auto;
       }
 
@@ -41,12 +44,14 @@
         color: $color-secondary;
 
         @include respond(medium) {
-          grid-template-columns: repeat(2, 1fr);
-          font-size: 12em;
+          grid-template-columns: 52% 28%;
+          grid-template-rows: 30% 30% 20%;
+          width: 100%;
         }
 
         @include respond(small) {
-          font-size: 10em;
+          // font-size: 10em;
+          grid-template-columns: 52% 48%;
         }
 
         @include respond(phone) {
@@ -85,13 +90,20 @@
           grid-column: 1 / span 1;
         }
 
+        span:first-child, span:nth-child(2) {
+          @include respond(medium) {
+            margin-left: 5%;
+            margin-top: .5em;
+          }
+        }
+
         span:last-child {
           grid-row: 3 / span 1;
           grid-column: 2 / span 1;
           color: white;
 
           @include respond(small) {
-            margin-left: 1em;
+            margin-left: .25em;
           }
 
           @include respond(phone) {
@@ -134,8 +146,14 @@
         font-size: 3.5em;
       }
 
+      @include respond(medium) {
+        grid-row: 2 / span 1;
+        align-self: center;
+      }
+
       @include respond(small) {
-        margin: 4em 0 7em 5em;
+        justify-self: center;
+        margin: 0 0 0 5em;
         font-size: 3.2em;
       }
 
@@ -149,27 +167,30 @@
       grid-row: 4 / span 1;
       grid-column: 2 / span 1;
       align-self: center;
-      width: 30vw;
+      width: 15em;
       margin-left: 12em;
       color: black;
       font-size: 2em;
       font-weight: 500;
       font-family: 'futura-pt';
-      line-height: 2em;
+      line-height: 1.25em;
       text-transform: uppercase;
+      
 
       @include respond(large) {
         // margin: 0 0 0 18em;
         align-self: flex-start;
         justify-self: flex-end;
-        width: 28em;
-        margin: 8em 0 0 0;
+        margin-top: 1em;
+        // width: 28em;
+        // margin: 8em 0 0 0;
       }
 
       @include respond(medium) {
-        align-self: flex-end;
-        justify-self: center;
-        margin: 0 0 0 11em;
+        margin-top: 0;
+        // align-self: flex-end;
+        // justify-self: center;
+        // margin: 0 0 0 11em;
       }
 
       @include respond(small) {

@@ -1,0 +1,142 @@
+.space-article {
+  display: grid;
+  grid-template-columns: .25fr 1fr .25fr;
+  grid-auto-columns: 0;
+  column-gap: 2rem;
+  font-size: 1rem;
+  z-index: 5;
+  padding: 10em 2em 0 2em;
+  position: relative;
+  overflow: hidden;
+
+  @include respond(small) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  p,
+  h3 {
+    grid-column: 2 / span 1;
+    line-height: 1.75;
+    width: 100%;
+    justify-self: center;
+    color: white;
+  }
+
+  p,
+  figcaption {
+    font-size: 1.6em;
+  }
+
+  p {
+    margin: 1em 0;
+  }
+
+  h3 {
+    color: $color-secondary;
+    font-size: 2.5em;
+  }
+
+  .aharonov-effect__article-figure.three {
+    // grid-row: auto / span 5;
+    grid-column: 1 / span 3;
+    display: flex;
+    width: 85%;
+    // height: 51em;
+    height: 100%;
+    border-left: 15em solid $color-secondary;
+
+    @include respond(small) {
+      width: 100%;
+      padding: 0;
+      border-left: 2em solid #a50034;
+    }
+    @include respond(phone) {
+      flex-direction: column;
+      width: 100%;
+      padding: 3em 0;
+    }
+
+    figure {
+      @include respond(phone) {
+        width: 75%;
+        margin: auto;
+      }
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+
+      @include respond(phone) {
+        width: 100%;
+        object-fit: contain;
+      }
+
+    }
+
+    // svg {
+    //   height: 100%;
+    //   width: 15em;
+
+    //   @include respond(phone) {
+    //     display: none;
+    //   }
+    // }
+
+    h3 {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 45%;
+      font-size: 3.2em;
+      margin: 0 2em;
+
+      @include respond(phone) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 2em 0;
+        width: 100%;
+      }
+
+      span {
+        // display: block;
+
+        &:nth-child(2) {
+          font-size: 1.2em;
+        }
+      }
+    }
+
+    figcaption {
+      background-color: #a50034;
+      color: white;
+      font-style: italic;
+      padding: 1em;
+    }
+  }
+
+  .dark-bg {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 120%;
+    background-color: #231f20;
+    z-index: -1;
+  }
+
+  .dark-bg-square {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 12em;
+    width: 13em;
+    border-top: .5em solid $color-secondary;
+    border-left: .5em solid $color-secondary;
+
+    @include respond(small) {
+      display: none;
+    }
+  }
+}

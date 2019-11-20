@@ -2,9 +2,8 @@ $(document).ready(function () {
 
   // $('.article-highlight__description.zero').css({ height: '100%', display: 'block', opacity: 1});
   
-  $('li .theory-listing').on('click', function () {
-    // debugger
-    if ($(this).parent().hasClass('.active')) {
+  $('li.theory-listing-item').on('click', function () {
+    if ($(this).hasClass('active')) {
       return;
     }
 
@@ -14,19 +13,55 @@ $(document).ready(function () {
       $theoryThree          = $('.theory-listing.three'),
       $theoryFour           = $('.theory-listing.four'),
       $theoryFive           = $('.theory-listing.five'),
-      $currentActive        = $('.aharonov-effect__article-theory-box li.active');
-      $currentShownContent  = $('.aharonov-effect__article-theory-box li.active .theory-content');
+      $currentActive        = $('.theory-listing ul li.active');
+      $currentShownContent  = $('.theory-listing-details .theory-content.one');
+      $contentToShow        = $('.theory-listing-details .theory-content.one')
+
+    // debugger
+
+    if ($currentActive.hasClass('two')) {
+      $currentShownContent  = $('.theory-listing-details .theory-content.two');
+    }
+
+    if ($currentActive.hasClass('three')) {
+      $currentShownContent  = $('.theory-listing-details .theory-content.three');
+    }
+
+    if ($currentActive.hasClass('four')) {
+      $currentShownContent  = $('.theory-listing-details .theory-content.four');
+    }
+
+    if ($currentActive.hasClass('five')) {
+      $currentShownContent  = $('.theory-listing-details .theory-content.five');
+    }
+
+    if ($this.hasClass('two')) {
+      $contentToShow  = $('.theory-listing-details .theory-content.two');
+    }
+
+    if ($this.hasClass('three')) {
+      $contentToShow  = $('.theory-listing-details .theory-content.three');
+    }
+
+    if ($this.hasClass('four')) {
+      $contentToShow  = $('.theory-listing-details .theory-content.four');
+    }
+
+    if ($this.hasClass('five')) {
+      $contentToShow  = $('.theory-listing-details .theory-content.five');
+    }
+
 
     $currentActive.removeClass('active');
     $currentShownContent.addClass('hidden');
     // debugger
-    $this.parent().addClass('active');
-    $this.siblings('.theory-content').removeClass('hidden');
-    if ($this.hasClass('five')) {
-      $('.aharonov-effect__article-theory-box').css('min-height', '85.5em');
-    } else {
-      $('.aharonov-effect__article-theory-box').css('min-height', '63.5em');
-    }
+    $this.addClass('active');
+    $contentToShow.removeClass('hidden');
+    // if ($this.hasClass('five')) {
+    //   $('.aharonov-effect__article-theory-box ul').css('min-height', '73rem');
+    // } else {
+    //   $('.aharonov-effect__article-theory-box ul').css('min-height', '60rem');
+    // }
     
     // if ($this.hasClass('one') && $highlightOneVisible) {
     //   $highlightOne.hide().css({ height: '0%', opacity: 0 });

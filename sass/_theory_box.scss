@@ -1,0 +1,171 @@
+  .aharonov-effect__article-theory-box {
+    grid-column: 1 / span 3;
+    justify-self: center;
+    width: 90%;
+    height: auto;
+    position: relative;
+    font-size: 1em;
+    margin-bottom: 4em;
+
+    // @include respond(large) {
+    //   width: 89em;
+    //   font-size: .8rem;
+    // }
+
+    // @include respond(medium) {
+    //   font-size: .65rem;
+    // }
+
+    @include respond(small) {
+      width: 100%;
+      // margin: 0 2rem 4em 0;
+      font-size: .55rem;
+    }
+
+    h3 {
+      width: 75%;
+      margin: 1em auto;
+      font-size: 2.4em;
+      text-align: center;
+      color: $color-secondary;
+    }
+
+    .theory-listing {
+      display: flex;
+      justify-content: center;
+      // width: 108em;
+
+      ul {
+        position: relative;
+        width: 20em;
+        height: 100%;
+        font-size: 1em;
+        list-style-type: none;
+
+
+        li {
+          display: flex;
+          align-items: center;
+          height: 3.5em;
+          margin: 1em 0;
+          font-size: 1.6em;
+          text-transform: uppercase;
+          font-weight: 500;
+          color: black;
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          &.active {
+            background-color: $color-secondary;
+            color: white;
+          }
+
+          &::before {
+            content: '';
+            display: inline-block;
+            margin-right: .5em;
+            color: $color-secondary;
+            height: inherit;
+            border-left: 10px solid $color-secondary;
+          }
+
+          &.active {
+
+            p {
+              color: white;
+            }
+
+            background-color: $color-secondary;
+          }
+        }
+      }
+
+      p {
+        font-size: 1.8em;
+        font-weight: 400;
+        height: auto;
+        margin: 0;
+        color: black;
+        text-transform: uppercase;
+      }
+
+      &-details {
+        width: auto;
+
+        .theory-content {
+          display: flex;
+          justify-content: space-between;
+          padding: 5em 7em;
+          background-color: $color-secondary;
+          color: white;
+          z-index: 20;
+          height: auto;
+
+
+          @include respond(large) {
+            width: 65.5em;
+          }
+
+          @include respond(medium) {
+            width: 55.5em;
+          }
+
+          @include respond(small) {
+            width: 36.5em;
+          }
+
+          @include respond(phone) {
+            width: 25.5em;
+            padding: 2em 1em;
+          }
+
+          p { color: white; }
+
+
+          .aharonov-effect__theory {
+            width: 45em;
+          }
+
+          .theory-title {
+            font-size: 2.8em;
+            text-transform: uppercase;
+            margin-bottom: 1em;
+          }
+
+          .theory-description {
+            line-height: 1.5;
+            font-size: 2em;
+            font-weight: 300;
+          }
+
+          svg {
+            width: 18em;
+          }
+
+          &.five {
+
+            .aharonov-effect__theory {
+              width: 50em;
+            }
+          }
+
+        }
+      }
+    }
+
+
+
+
+    .rectangle-shape {
+      position: absolute;
+      height: 90%;
+      bottom: -3em;
+      right: 3em;
+      width: 84.5em;
+      z-index: -1;
+    }
+  }
+
+  .theory-listing-deatils {}
