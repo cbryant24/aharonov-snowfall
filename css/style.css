@@ -117,42 +117,80 @@ ORDER: Base + typography > general layout + grid > page layout > components
   grid-template-columns: 55% 45%;
   grid-auto-rows: 0;
   grid-auto-columns: 0;
-  height: 58em;
+  height: 78em;
   font-size: 1rem; }
+  @media only screen and (max-width: 1500px) {
+    #aharonov_effect-article.article-container .aharonov-title__container {
+      grid-template-columns: 60% 40%; } }
   @media only screen and (max-width: 1000px) {
     #aharonov_effect-article.article-container .aharonov-title__container {
       font-size: .95rem;
-      grid-template-columns: 60% 40%; } }
+      grid-template-rows: repeat(3, 15%) 25% 30%;
+      grid-template-columns: 65% 35%; } }
   @media only screen and (max-width: 800px) {
     #aharonov_effect-article.article-container .aharonov-title__container {
+      grid-template-rows: repeat(4, 0.25fr) 0.5fr;
       grid-template-columns: 55% 45%;
-      font-size: .9rem;
-      height: auto; } }
+      font-size: .9rem; } }
+  @media only screen and (max-width: 678px) {
+    #aharonov_effect-article.article-container .aharonov-title__container {
+      height: 46em;
+      font-size: .8rem; } }
+  @media only screen and (max-width: 425px) {
+    #aharonov_effect-article.article-container .aharonov-title__container {
+      height: 35em;
+      font-size: .75rem; } }
   #aharonov_effect-article.article-container .aharonov-title__container img {
     grid-row: 1 / span 5;
     grid-column: 1 / span 2;
     object-fit: contain;
-    height: auto;
-    width: 74em;
+    height: 100%;
+    width: auto;
     margin: 0 auto; }
+    @media only screen and (max-width: 1000px) {
+      #aharonov_effect-article.article-container .aharonov-title__container img {
+        height: 88%; } }
+    @media only screen and (max-width: 678px) {
+      #aharonov_effect-article.article-container .aharonov-title__container img {
+        height: 100%; } }
+    @media only screen and (max-width: 425px) {
+      #aharonov_effect-article.article-container .aharonov-title__container img {
+        height: 90%; } }
   #aharonov_effect-article.article-container .aharonov-title__container span {
     z-index: 10; }
   #aharonov_effect-article.article-container .aharonov-title__container span p {
-    font-size: 7em;
+    font-size: 12em;
     font-weight: 500;
+    font-family: futura-pt-condensed;
     line-height: .75;
     color: #a50034;
     text-transform: uppercase; }
+    @media only screen and (max-width: 678px) {
+      #aharonov_effect-article.article-container .aharonov-title__container span p {
+        font-size: 8em; } }
   #aharonov_effect-article.article-container .aharonov-title__container span:first-child, #aharonov_effect-article.article-container .aharonov-title__container span:nth-child(2) {
     align-self: center;
     width: 40em;
-    margin-left: 40%; }
+    margin-left: 55%; }
+    @media only screen and (max-width: 1500px) {
+      #aharonov_effect-article.article-container .aharonov-title__container span:first-child, #aharonov_effect-article.article-container .aharonov-title__container span:nth-child(2) {
+        margin-left: 50%; } }
+    @media only screen and (max-width: 1300px) {
+      #aharonov_effect-article.article-container .aharonov-title__container span:first-child, #aharonov_effect-article.article-container .aharonov-title__container span:nth-child(2) {
+        margin-left: 40%; } }
     @media only screen and (max-width: 1000px) {
       #aharonov_effect-article.article-container .aharonov-title__container span:first-child, #aharonov_effect-article.article-container .aharonov-title__container span:nth-child(2) {
         margin-left: 24%; } }
     @media only screen and (max-width: 800px) {
       #aharonov_effect-article.article-container .aharonov-title__container span:first-child, #aharonov_effect-article.article-container .aharonov-title__container span:nth-child(2) {
         margin-left: 15%; } }
+    @media only screen and (max-width: 678px) {
+      #aharonov_effect-article.article-container .aharonov-title__container span:first-child, #aharonov_effect-article.article-container .aharonov-title__container span:nth-child(2) {
+        margin-left: 35%; } }
+    @media only screen and (max-width: 425px) {
+      #aharonov_effect-article.article-container .aharonov-title__container span:first-child, #aharonov_effect-article.article-container .aharonov-title__container span:nth-child(2) {
+        width: 13em;
+        margin-left: 10%; } }
   #aharonov_effect-article.article-container .aharonov-title__container span:first-child {
     grid-row: 1 / span 1;
     grid-column: 1 / span 1; }
@@ -176,8 +214,10 @@ ORDER: Base + typography > general layout + grid > page layout > components
       font-size: 2.5em; } }
   @media only screen and (max-width: 678px) {
     #aharonov_effect-article.article-container .aharonov-title__author {
+      align-self: center;
       justify-self: center;
-      margin: 0 0 0 5em;
+      margin: 0;
+      margin-right: 3em;
       font-size: 3.2em; } }
   @media only screen and (max-width: 425px) {
     #aharonov_effect-article.article-container .aharonov-title__author {
@@ -187,9 +227,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
   grid-row: 5 / span 1;
   grid-column: 2 / span 1;
   align-self: center;
-  justify-self: flex-end;
-  width: 25em;
-  margin-left: 1em;
+  justify-self: flex-start;
+  width: 19em;
+  margin-left: 7em;
   color: black;
   font-size: 1.6em;
   font-weight: 500;
@@ -198,24 +238,26 @@ ORDER: Base + typography > general layout + grid > page layout > components
   text-transform: uppercase; }
   @media only screen and (max-width: 1000px) {
     #aharonov_effect-article.article-container .aharonov-title__description {
-      align-self: flex-end;
+      align-self: flex-start;
       justify-self: flex-end;
-      margin: auto 0;
+      margin: 0;
       width: 18em; } }
   @media only screen and (max-width: 800px) {
     #aharonov_effect-article.article-container .aharonov-title__description {
       margin-top: 0; } }
   @media only screen and (max-width: 678px) {
     #aharonov_effect-article.article-container .aharonov-title__description {
-      margin: 0 0 0 11em;
+      justify-self: center;
+      align-self: center;
+      margin: 0 0 0 2em;
       font-size: 1.4em;
-      width: 26em; } }
+      width: 13em; } }
   @media only screen and (max-width: 425px) {
     #aharonov_effect-article.article-container .aharonov-title__description {
+      margin: 0 0 0 3em;
+      width: 12em;
       font-size: 1.2em;
-      width: 17em;
-      align-self: center;
-      margin: 6em 0 5em 8em; } }
+      align-self: center; } }
 
 @media only screen and (max-width: 800px) {
   #aharonov_effect-article.article-container .aharonov-title__desktop-img {
@@ -257,6 +299,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
       line-height: 1.75;
       width: 100%;
       justify-self: center; }
+    #aharonov_effect-article.article-container .aharonov-effect__article-content h3 {
+      color: #a50034;
+      font-size: 2.5em; }
     #aharonov_effect-article.article-container .aharonov-effect__article-content p,
     #aharonov_effect-article.article-container .aharonov-effect__article-content figcaption {
       font-size: 1.6em; }
@@ -288,9 +333,10 @@ ORDER: Base + typography > general layout + grid > page layout > components
       grid-row: auto / span 5;
       grid-column: 1 / span 1;
       width: 100%; }
-      @media only screen and (max-width: 425px) {
+      @media only screen and (max-width: 678px) {
         #aharonov_effect-article.article-container .aharonov-effect__article-content .aharonov-effect__article-figure.one {
-          display: flex; } }
+          display: flex;
+          flex-direction: column; } }
       #aharonov_effect-article.article-container .aharonov-effect__article-content .aharonov-effect__article-figure.one img {
         width: 100%; }
       #aharonov_effect-article.article-container .aharonov-effect__article-content .aharonov-effect__article-figure.one figcaption {
@@ -329,7 +375,10 @@ ORDER: Base + typography > general layout + grid > page layout > components
             width: 65em; } }
         @media only screen and (max-width: 678px) {
           #aharonov_effect-article.article-container .aharonov-effect__article-content .aharonov-effect__article-figure.two img {
-            width: 33em; } }
+            width: 47rem; } }
+        @media only screen and (max-width: 425px) {
+          #aharonov_effect-article.article-container .aharonov-effect__article-content .aharonov-effect__article-figure.two img {
+            width: 29rem; } }
       #aharonov_effect-article.article-container .aharonov-effect__article-content .aharonov-effect__article-figure.two figcaption {
         height: 39em;
         width: 27.3em;
@@ -521,6 +570,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
         text-transform: uppercase;
         font-weight: 500;
         color: black; }
+        .aharonov-effect__article-theory-box .theory-listing ul li:first-child {
+          margin-top: 0; }
         .aharonov-effect__article-theory-box .theory-listing ul li:hover {
           cursor: pointer; }
         .aharonov-effect__article-theory-box .theory-listing ul li.active {
@@ -562,7 +613,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
             width: 55.5em; } }
         @media only screen and (max-width: 678px) {
           .aharonov-effect__article-theory-box .theory-listing-details .theory-content {
-            width: 36.5em; } }
+            width: 39.5rem;
+            padding: 3em 3em; } }
         @media only screen and (max-width: 425px) {
           .aharonov-effect__article-theory-box .theory-listing-details .theory-content {
             width: 25.5em;

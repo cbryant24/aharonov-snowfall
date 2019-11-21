@@ -8,39 +8,71 @@
       grid-template-columns: 55% 45%;
       grid-auto-rows: 0;
       grid-auto-columns: 0;
-      height: 58em;
+      height: 78em;
 
       font-size: 1rem;
 
-      @include respond(large) {
-        font-size: .95rem;
+      @media only screen and (max-width: 1500px) {
         grid-template-columns: 60% 40%;
       }
 
+      @include respond(large) {
+        font-size: .95rem;
+        grid-template-rows: repeat(3, 15%) 25% 30%;
+        grid-template-columns: 65% 35%;
+      }
+
       @include respond(medium) {
+        grid-template-rows: repeat(4, .25fr) .5fr;
         grid-template-columns: 55% 45%;
         font-size: .9rem;
-        height: auto;
+      }
+
+      @include respond(small) {
+        height: 46em;
+        font-size: .8rem;
+      }
+
+      @include respond(phone) {
+        height: 35em;
+        font-size: .75rem;
       }
 
       img {
         grid-row: 1 / span 5;
         grid-column: 1 / span 2;
         object-fit: contain;
-        height: auto;
-        width: 74em;
+        height: 100%;
+        width: auto;
         margin: 0 auto;
+
+        @include respond(large) {
+          height: 88%;
+        }
+
+        @include respond(small) {
+          height: 100%;
+        }
+
+        @include respond(phone) {
+          height: 90%;
+        }
       }
 
       span {
         z-index: 10;
       }
       span p {
-        font-size: 7em;
+        font-size: 12em;
         font-weight: 500;
+        font-family: futura-pt-condensed;
         line-height: .75;
         color: $color-secondary;
         text-transform: uppercase;
+
+        @include respond(small) {
+          font-size: 8em;
+        }
 
       }
 
@@ -48,14 +80,30 @@
         // justify-self: center;
         align-self: center;
         width: 40em;
-        margin-left: 40%;
+        margin-left: 55%;
 
+        @media only screen and (max-width: 1500px) {
+          margin-left: 50%;
+        }
+
+        @include respond(largest) {
+          margin-left: 40%;
+        }
         @include respond(large) {
           margin-left: 24%;
         }
 
         @include respond(medium) {
           margin-left: 15%;
+        }
+
+        @include respond(small) {
+          margin-left: 35%;
+        }
+
+        @include respond(phone) {
+          width: 13em;
+          margin-left: 10%;
         }
       }
 
@@ -210,8 +258,10 @@
       // }
 
       @include respond(small) {
+        align-self: center;
         justify-self: center;
-        margin: 0 0 0 5em;
+        margin: 0;
+        margin-right: 3em;
         font-size: 3.2em;
       }
 
@@ -225,9 +275,9 @@
       grid-row: 5 / span 1;
       grid-column: 2 / span 1;
       align-self: center;
-      justify-self: flex-end;
-      width: 25em;
-      margin-left: 1em;
+      justify-self: flex-start;
+      width: 19em;
+      margin-left: 7em;
       color: black;
       font-size: 1.6em;
       font-weight: 500;
@@ -238,9 +288,9 @@
 
       @include respond(large) {
         // margin: 0 0 0 18em;
-        align-self: flex-end;
+        align-self: flex-start;
         justify-self: flex-end;
-        margin: auto 0;
+        margin: 0;
         width: 18em;
         // width: 28em;
         // margin: 8em 0 0 0;
@@ -254,15 +304,18 @@
       }
 
       @include respond(small) {
-        margin: 0 0 0 11em;
+        justify-self: center;
+        align-self: center;
+        margin: 0 0 0 2em;
         font-size: 1.4em;
-        width: 26em;      }
+        width: 13em;      
+      }
 
       @include respond(phone) {
+        margin: 0 0 0 3em;
+        width: 12em;
         font-size: 1.2em;
-        width: 17em;
         align-self: center;
-        margin: 6em 0 5em 8em;
       }
     }
 

@@ -54,5 +54,5 @@ $bp-mobile: 425px;
 
   @if $breakpoint == largest {
     @media only screen and (max-width: $bp-largest) { @content };    //1200
-}
+  }
 }
