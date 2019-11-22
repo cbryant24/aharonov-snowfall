@@ -1,4 +1,4 @@
-  .aharonov-effect__article-theory-box {
+.aharonov-effect__article-theory-box {
     grid-column: 1 / span 3;
     justify-self: center;
     width: 90%;
@@ -7,18 +7,8 @@
     font-size: 1em;
     margin-bottom: 4em;
 
-    // @include respond(large) {
-    //   width: 89em;
-    //   font-size: .8rem;
-    // }
-
-    // @include respond(medium) {
-    //   font-size: .65rem;
-    // }
-
     @include respond(small) {
-      width: 100%;
-      // margin: 0 2rem 4em 0;
+      width: 100vw;
       font-size: .55rem;
     }
 
@@ -33,7 +23,6 @@
     .theory-listing {
       display: flex;
       justify-content: center;
-      // width: 108em;
 
       ul {
         position: relative;
@@ -41,11 +30,7 @@
         height: 100%;
         font-size: 1em;
         list-style-type: none;
-
-        // @include respond(small) {
-        //   width: 13em;
-        // }
-
+        width: 20%;
 
         li {
           display: flex;
@@ -96,11 +81,14 @@
         height: auto;
         margin: 0;
         color: black;
-        text-transform: uppercase;
       }
 
       &-details {
         width: auto;
+
+        @include respond(small) {
+          width: 80%;
+        }
 
         .theory-content {
           display: flex;
@@ -121,13 +109,14 @@
           }
 
           @include respond(small) {
-            width: 39.5rem;
+            // width: 39.5rem;
+            width: 100%;
             padding: 3em 3em;
           }
 
           @include respond(phone) {
-            width: 25.5em;
-            padding: 2em 1em;
+            // width: 35.5rem;
+            padding: 2em 5em;
           }
 
           p { color: white; }
@@ -141,6 +130,7 @@
             font-size: 2.8em;
             text-transform: uppercase;
             margin-bottom: 1em;
+            color: white;
           }
 
           .theory-description {
@@ -150,7 +140,8 @@
           }
 
           svg {
-            width: 18em;
+            width: 16em;
+            margin-left: 3rem;
           }
 
           &.five {
@@ -164,9 +155,6 @@
       }
     }
 
-
-
-
     .rectangle-shape {
       position: absolute;
       height: 90%;
@@ -176,5 +164,3 @@
       z-index: -1;
     }
   }
-
-  .theory-listing-deatils {}

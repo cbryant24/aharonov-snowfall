@@ -1,11 +1,12 @@
 .space-article {
   display: grid;
-  grid-template-columns: .25fr 1fr .25fr;
+  grid-template-columns: 23.75% 48.5% 26.2%;
   grid-auto-columns: 0;
   column-gap: 2rem;
   font-size: 1rem;
+  margin: 0 2rem;
   z-index: 5;
-  padding: 10em 2em 0 2em;
+  padding: 10em 2em 0 0em;
   position: relative;
   overflow: hidden;
 
@@ -33,18 +34,27 @@
   }
 
   h3 {
-    color: $color-secondary;
     font-size: 2.5em;
+
+    &.aharonov_effect__article-subheading {
+      padding-left: 1rem;
+      border-left: 1rem solid $color-secondary;
+    }
   }
 
   .aharonov-effect__article-figure.three {
     // grid-row: auto / span 5;
     grid-column: 1 / span 3;
-    display: flex;
-    width: 85%;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 18.25% 59.75% 18.25%;
+    grid-auto-columns: 0;
+    column-gap: 2rem;
+    margin: 0 2rem;
+    // width: 85%;
     // height: 51em;
-    height: 100%;
-    border-left: 15em solid $color-secondary;
+    // height: 100%;
+    // border-left: 15em solid $color-secondary;
 
     @include respond(small) {
       width: 100%;
@@ -55,11 +65,21 @@
       flex-direction: column;
       width: 100%;
       padding: 3em 0;
+      border-left: none;
+    }
+
+    .square {
+      background-color: #a50034;
+      width: 85%;
+      margin-left: -2rem;
     }
 
     figure {
+      grid-row: 1 / span 1;
+      grid-column: 2 / span 1;
+
       @include respond(phone) {
-        width: 75%;
+        width: 60%;
         margin: auto;
       }
     }
@@ -73,25 +93,29 @@
         object-fit: contain;
       }
 
+      p {
+        grid-column: 1 / span 2;
+        margin-left: 5.2rem;
+      }
+
     }
-
-    // svg {
-    //   height: 100%;
-    //   width: 15em;
-
-    //   @include respond(phone) {
-    //     display: none;
-    //   }
-    // }
 
     h3 {
       color: white;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      width: 45%;
+      width: 100%;
       font-size: 3.2em;
-      margin: 0 2em;
+      grid-row: 1 / span 1;
+      grid-column: 2 / span 1;
+      width: 65%;
+      align-self: flex-start;
+      justify-self: flex-start;
+      font-size: 3.25em;
+      height: 100%;
+      // margin: 0 2em;
+      
 
       @include respond(phone) {
         flex-direction: row;
@@ -101,10 +125,9 @@
       }
 
       span {
-        // display: block;
 
         &:nth-child(2) {
-          font-size: 1.2em;
+          font-size: 1.1em;
         }
       }
     }
@@ -138,5 +161,9 @@
     @include respond(small) {
       display: none;
     }
+  }
+
+  .aharonov_effect__article-subheading.light {
+    color: white;
   }
 }
