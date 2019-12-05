@@ -5,10 +5,10 @@
 
   .aharonov-effect__article-content {
     display: grid;
-    grid-template-columns: .5fr 1fr .25fr;
+    grid-template-columns: 25% 45% 30%;
     grid-auto-columns: 0;
     column-gap: 2rem;
-    margin: 0 2rem;
+    padding: 0 2rem;
     font-size: 1rem;
     z-index: 5;
 
@@ -20,12 +20,12 @@
     @include respond(small) {
       display: flex;
       flex-direction: column;
-      margin: 0 3rem;
+      padding: 0 3rem;
     }
 
-    @include respond(phone) {
-      margin: 0 2rem;
-    }
+    // @include respond(phone) {
+    //   padding: 0 3rem;
+    // }
 
     p,
     h3 {
@@ -60,9 +60,11 @@
         font-size: 1.25em;
         font-style: italic;
         line-height: 1.2;
+        padding-right: 2rem;
 
         @include respond(large) {
-          width: 12em;
+          width: 16em;
+          padding-right: 0rem;
         }
 
         @include respond(medium) {
@@ -183,7 +185,7 @@
           }
 
           @include respond(phone) {
-            width: 29rem;
+            width: 38rem;
           }
         }
 
@@ -219,7 +221,11 @@
             color: $color-secondary;
 
             @include respond(small) {
+              margin: 2.5em 0;
               text-align: center;
+              font-style: italic;
+              margin-bottom: 1em;
+              
 
               &:before, &:after {
                 content: '"';

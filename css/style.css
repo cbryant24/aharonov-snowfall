@@ -275,10 +275,10 @@ ORDER: Base + typography > general layout + grid > page layout > components
   font-size: 1rem; }
   #aharonov_effect-article.article-container .aharonov-effect__article-content {
     display: grid;
-    grid-template-columns: .5fr 1fr .25fr;
+    grid-template-columns: 25% 45% 30%;
     grid-auto-columns: 0;
     column-gap: 2rem;
-    margin: 0 2rem;
+    padding: 0 2rem;
     font-size: 1rem;
     z-index: 5; }
     @media only screen and (max-width: 1000px) {
@@ -289,10 +289,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
       #aharonov_effect-article.article-container .aharonov-effect__article-content {
         display: flex;
         flex-direction: column;
-        margin: 0 3rem; } }
-    @media only screen and (max-width: 425px) {
-      #aharonov_effect-article.article-container .aharonov-effect__article-content {
-        margin: 0 2rem; } }
+        padding: 0 3rem; } }
     #aharonov_effect-article.article-container .aharonov-effect__article-content p,
     #aharonov_effect-article.article-container .aharonov-effect__article-content h3 {
       grid-column: 2 / span 1;
@@ -314,10 +311,12 @@ ORDER: Base + typography > general layout + grid > page layout > components
       text-transform: uppercase;
       font-size: 1.25em;
       font-style: italic;
-      line-height: 1.2; }
+      line-height: 1.2;
+      padding-right: 2rem; }
       @media only screen and (max-width: 1000px) {
         #aharonov_effect-article.article-container .aharonov-effect__article-content .aharonov-effect__callout.one, #aharonov_effect-article.article-container .aharonov-effect__article-content .aharonov-effect__callout.two {
-          width: 12em; } }
+          width: 16em;
+          padding-right: 0rem; } }
       @media only screen and (max-width: 800px) {
         #aharonov_effect-article.article-container .aharonov-effect__article-content .aharonov-effect__callout.one, #aharonov_effect-article.article-container .aharonov-effect__article-content .aharonov-effect__callout.two {
           width: 11em; } }
@@ -398,7 +397,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
             width: 47rem; } }
         @media only screen and (max-width: 425px) {
           #aharonov_effect-article.article-container .aharonov-effect__article-content .aharonov-effect__article-figure.two img {
-            width: 29rem; } }
+            width: 38rem; } }
       #aharonov_effect-article.article-container .aharonov-effect__article-content .aharonov-effect__article-figure.two figcaption {
         height: 39em;
         width: 27.3em;
@@ -427,7 +426,10 @@ ORDER: Base + typography > general layout + grid > page layout > components
           color: #a50034; }
           @media only screen and (max-width: 678px) {
             #aharonov_effect-article.article-container .aharonov-effect__article-content .aharonov-effect__article-figure.two figcaption span:first-child {
-              text-align: center; }
+              margin: 2.5em 0;
+              text-align: center;
+              font-style: italic;
+              margin-bottom: 1em; }
               #aharonov_effect-article.article-container .aharonov-effect__article-content .aharonov-effect__article-figure.two figcaption span:first-child:before, #aharonov_effect-article.article-container .aharonov-effect__article-content .aharonov-effect__article-figure.two figcaption span:first-child:after {
                 content: '"';
                 font-size: inherit; } }
@@ -463,19 +465,23 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .space-article {
   display: grid;
-  grid-template-columns: 23.75% 48.5% 26.2%;
+  grid-template-columns: 25% 45% 30%;
   grid-auto-columns: 0;
   column-gap: 2rem;
   font-size: 1rem;
-  margin: 0 2rem;
   z-index: 5;
-  padding: 10em 2em 0 0em;
+  padding: 10em 2rem;
   position: relative;
   overflow: hidden; }
+  @media only screen and (max-width: 1000px) {
+    .space-article {
+      grid-template-columns: 20% 60% 20%;
+      font-size: .9rem; } }
   @media only screen and (max-width: 678px) {
     .space-article {
       display: flex;
-      flex-direction: column; } }
+      flex-direction: column;
+      padding: 10em 3rem; } }
   .space-article p,
   .space-article h3 {
     grid-column: 2 / span 1;
@@ -497,42 +503,83 @@ ORDER: Base + typography > general layout + grid > page layout > components
     grid-column: 1 / span 3;
     display: grid;
     grid-template-rows: repeat(2, auto);
-    grid-template-columns: 18.25% 59.75% 18.25%;
+    grid-template-columns: 24% 45% 30%;
     grid-auto-columns: 0;
     column-gap: 2rem;
-    margin: 0 2rem; }
+    margin: 0 2rem;
+    row-gap: 7rem; }
+    @media only screen and (max-width: 1000px) {
+      .space-article .aharonov-effect__article-figure.three {
+        grid-template-columns: 18% 60% 20%; } }
     @media only screen and (max-width: 678px) {
       .space-article .aharonov-effect__article-figure.three {
+        grid-template-columns: 24% 38% 32%;
         width: 100%;
         padding: 0;
-        border-left: 2em solid #a50034; } }
+        padding-top: 10rem;
+        margin: 0; } }
     @media only screen and (max-width: 425px) {
       .space-article .aharonov-effect__article-figure.three {
+        display: flex;
         flex-direction: column;
         width: 100%;
-        padding: 3em 0;
         border-left: none; } }
     .space-article .aharonov-effect__article-figure.three .square {
       background-color: #a50034;
       width: 85%;
-      margin-left: -2rem; }
+      margin-left: -15rem; }
+      @media only screen and (max-width: 1300px) {
+        .space-article .aharonov-effect__article-figure.three .square {
+          margin-left: -10rem;
+          height: 55%; } }
+      @media only screen and (max-width: 678px) {
+        .space-article .aharonov-effect__article-figure.three .square {
+          grid-column: 1 / span 2;
+          grid-row: 1 / span 1;
+          width: 2%;
+          height: 70%;
+          margin-left: 0; } }
     .space-article .aharonov-effect__article-figure.three figure {
       grid-row: 1 / span 1;
-      grid-column: 2 / span 1; }
+      grid-column: 2 / span 1;
+      width: 35%;
+      justify-self: flex-end;
+      display: flex;
+      justify-content: flex-end;
+      align-self: flex-start; }
+      @media only screen and (max-width: 1300px) {
+        .space-article .aharonov-effect__article-figure.three figure {
+          width: 45%;
+          margin-right: -15rem; } }
+      @media only screen and (max-width: 678px) {
+        .space-article .aharonov-effect__article-figure.three figure {
+          grid-row: 1 / span 2;
+          grid-column: 3 / span 1;
+          align-self: flex-start;
+          width: 100%;
+          margin-right: 0; } }
       @media only screen and (max-width: 425px) {
         .space-article .aharonov-effect__article-figure.three figure {
           width: 60%;
-          margin: auto; } }
+          margin: auto;
+          margin-bottom: 2rem; } }
+      .space-article .aharonov-effect__article-figure.three figure .image-holder {
+        width: 90%;
+        margin-left: 3rem; }
+        @media only screen and (max-width: 800px) {
+          .space-article .aharonov-effect__article-figure.three figure .image-holder {
+            width: 100%;
+            margin-left: 0; } }
     .space-article .aharonov-effect__article-figure.three img {
       height: 100%;
-      object-fit: cover; }
+      max-height: 33rem;
+      width: 100%;
+      object-fit: cover;
+      object-position: top; }
       @media only screen and (max-width: 425px) {
         .space-article .aharonov-effect__article-figure.three img {
           width: 100%;
           object-fit: contain; } }
-      .space-article .aharonov-effect__article-figure.three img p {
-        grid-column: 1 / span 2;
-        margin-left: 5.2rem; }
     .space-article .aharonov-effect__article-figure.three h3 {
       color: white;
       display: flex;
@@ -547,6 +594,11 @@ ORDER: Base + typography > general layout + grid > page layout > components
       justify-self: flex-start;
       font-size: 3.25em;
       height: 100%; }
+      @media only screen and (max-width: 678px) {
+        .space-article .aharonov-effect__article-figure.three h3 {
+          grid-column: 1 / span 2;
+          width: 95%;
+          justify-self: flex-end; } }
       @media only screen and (max-width: 425px) {
         .space-article .aharonov-effect__article-figure.three h3 {
           flex-direction: row;
@@ -554,12 +606,33 @@ ORDER: Base + typography > general layout + grid > page layout > components
           margin: 2em 0;
           width: 100%; } }
       .space-article .aharonov-effect__article-figure.three h3 span:nth-child(2) {
-        font-size: 1.1em; }
+        font-size: 1.1em;
+        margin-bottom: 11rem; }
+        @media only screen and (max-width: 800px) {
+          .space-article .aharonov-effect__article-figure.three h3 span:nth-child(2) {
+            margin-bottom: 5rem; } }
+        @media only screen and (max-width: 678px) {
+          .space-article .aharonov-effect__article-figure.three h3 span:nth-child(2) {
+            margin-bottom: 2rem; } }
+      @media only screen and (max-width: 678px) {
+        .space-article .aharonov-effect__article-figure.three h3 span:nth-child(3) {
+          font-size: .75em; } }
     .space-article .aharonov-effect__article-figure.three figcaption {
+      width: auto;
       background-color: #a50034;
       color: white;
       font-style: italic;
       padding: 1em; }
+    @media only screen and (max-width: 1300px) {
+      .space-article .aharonov-effect__article-figure.three p {
+        margin-left: -16px; } }
+    @media only screen and (max-width: 1000px) {
+      .space-article .aharonov-effect__article-figure.three p {
+        margin-left: 0; } }
+    @media only screen and (max-width: 678px) {
+      .space-article .aharonov-effect__article-figure.three p {
+        grid-column: 1 / span 2;
+        align-self: flex-end; } }
   .space-article .dark-bg {
     position: absolute;
     left: 0;
@@ -592,6 +665,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   @media only screen and (max-width: 678px) {
     .aharonov-effect__article-theory-box {
       width: 100vw;
+      margin-left: -2.5rem;
       font-size: .55rem; } }
   .aharonov-effect__article-theory-box h3 {
     width: 75%;
@@ -609,6 +683,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
       font-size: 1em;
       list-style-type: none;
       width: 20%; }
+      @media only screen and (max-width: 678px) {
+        .aharonov-effect__article-theory-box .theory-listing ul {
+          width: 30%; } }
       .aharonov-effect__article-theory-box .theory-listing ul li {
         display: flex;
         align-items: center;
@@ -646,7 +723,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
       width: auto; }
       @media only screen and (max-width: 678px) {
         .aharonov-effect__article-theory-box .theory-listing-details {
-          width: 80%; } }
+          width: 70%; } }
       .aharonov-effect__article-theory-box .theory-listing-details .theory-content {
         display: flex;
         justify-content: space-between;
@@ -664,7 +741,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
         @media only screen and (max-width: 678px) {
           .aharonov-effect__article-theory-box .theory-listing-details .theory-content {
             width: 100%;
-            padding: 3em 3em; } }
+            padding: 3em 3em;
+            justify-content: space-around; } }
         @media only screen and (max-width: 425px) {
           .aharonov-effect__article-theory-box .theory-listing-details .theory-content {
             padding: 2em 5em; } }
